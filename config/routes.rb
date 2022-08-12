@@ -4,13 +4,11 @@ Rails.application.routes.draw do
   # get 'transactions/new'
   # get 'categories/index'
   # get 'categories/show'
-  # get 'categories/new'
+  # get 'categories/new
 
+  devise_for :users
   resources :categories
   resources :transactions
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
-  root 'categories#index'
+  root 'categories#index' 
 end
