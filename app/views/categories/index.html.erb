@@ -5,15 +5,17 @@
   </section>
   <p><%= notice %></p>
   <div>
+    <% @total_amount = 0 %>
     <% @categories.each do |category| %>
       <%= link_to category  do %>
-        <%= render category %>
+        <%= render category %>        
+        <% @total_amount += category.transactions.map {|transaction| transaction.amount}.sum %>        
       <% end %>
     <% end %>
+     <h5>Total for all categories: $<%= @total_amount %></h5>
   </div>
   <div>
     <%= link_to "New Category", new_category_path %>
   </div>
 </div>
-
 
