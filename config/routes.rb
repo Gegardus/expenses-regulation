@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # get 'splash/index'
   # get 'transactions/index'
   # get 'transactions/show'
   # get 'transactions/new'
@@ -10,5 +11,11 @@ Rails.application.routes.draw do
   resources :categories
   resources :transactions
 
-  root 'categories#index' 
+  unauthenticated do
+    root "splash#index"
+  end
+
+  authenticated :user do
+    root 'categories#index', as: :authenticated_root
+  end
 end
