@@ -1,2 +1,9 @@
-<h1>Transactions#new</h1>
-<p>Find me in app/views/transactions/new.html.erb</p>
+
+  <div>
+    <%= link_to categories_path do %>
+      Link to categories
+    <% end %>
+    <h5>NEW TRANSACTION</h5>
+  </div>
+  <%= render "form", transaction: @transaction %>
+</div>

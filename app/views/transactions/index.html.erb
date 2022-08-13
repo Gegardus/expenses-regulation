@@ -1,2 +1,10 @@
-<h1>Transactions#index</h1>
-<p>Find me in app/views/transactions/index.html.erb</p>
+<h1>Transections</h1>
+  <% @transactions.each do |transaction| %>
+    <%= render transaction %>
+    <p>
+      <%= link_to "Show this transaction", transaction %>
+    </p>
+  <% end %>
+</div>
+<%= link_to "New transaction", new_transaction_path %>
+

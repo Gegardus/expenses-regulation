@@ -1,2 +1,8 @@
-<h1>Categories#new</h1>
-<p>Find me in app/views/categories/new.html.erb</p>
+<div class="flex flex-col">
+  <div>
+    <%= link_to categories_path do %>      
+    <% end %>
+    <h5>NEW CATEGORY</h5>
+  </div>
+  <%= render "form", category: @category %>
+</div>

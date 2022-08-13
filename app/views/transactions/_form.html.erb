@@ -1,0 +1,32 @@
+<%= form_with(model: transaction) do |form| %>
+  <% if transaction.errors.any? %>
+    <div>
+      <h2><%= pluralize(proceeding.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+      <ul>
+        <% transaction.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div>
+    <div>
+      <%= form.label :category_id %>
+      <%= form.select :category_id, @category.map { |category| [category.name, category.id] } %>
+    </div>
+
+    <div>
+      <%= form.text_field :name, autocomplete: "name", autofocus: true, placeholder: "Name", required: true, id: "name" %>
+      <label for="floating_name">Name</label>
+    </div>
+
+    <div>
+      <%= form.number_field :amount, autocomplete: "amount", placeholder: "Amount", required: true, id: "amount" %>
+      <label for="floating_amount">Amount</label>
+    </div>
+
+    <div>
+      <%= form.submit "Submit" %>
+    </div>
+  </div>
+<% end %>
