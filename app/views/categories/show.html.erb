@@ -1,2 +1,29 @@
-<h1>Categories#show</h1>
-<p>Find me in app/views/categories/show.html.erb</p>
+<div>
+  <div>
+    <%= link_to categories_path do %>Link to categories     
+    <% end %>
+    <h5>PAYMENTS PER <strong> <%= @category.name.upcase %> </strong> CATEGORY </h5>
+  </div>
+  <p><%= notice %></p>  
+  <div>
+    <% @transactions.each do |transaction| %>
+      <div>
+        <div>
+          <h5><%= transaction.name %></h5>
+          <h5><%= transaction.created_at.strftime("%Y-%m-%d") %></h5>
+        </div>
+        <h5>$<%= transaction.amount %></h5>
+      </div>
+    <% end %>
+    <h5>Total for <%= @category.name %>  $<%= @category.transactions.map {|transaction| transaction.amount}.sum %></h5> 
+  </div>
+  <div>
+    <%= link_to "New Transaction", new_transaction_path %>
+  </div>
+  <div>
+  <%= link_to "All transactions", transactions_path %>
+  </div>
+  <div>
+  <%= button_to "Destroy this category", @category, method: :delete %>
+  </div>
+<div>

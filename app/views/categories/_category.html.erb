@@ -1,0 +1,5 @@
+<div id="<%= dom_id category %>" >
+  <h5><%= category.name %></h5>
+  <h5>$<%= category.transactions.map {|transaction| transaction.amount}.sum %></h5>
+</div>
+
