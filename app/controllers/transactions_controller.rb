@@ -1,5 +1,4 @@
-
- class TransactionsController < ApplicationController
+class TransactionsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_transaction, only: %i[show edit update destroy]
 
@@ -68,4 +67,3 @@
     params.require(:transaction).permit(:name, :amount, :category_id)
   end
 end
-
