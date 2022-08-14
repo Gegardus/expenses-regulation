@@ -1,10 +1,10 @@
-<h1>Transections</h1>
+<h1 class="text-center font-bold">List of All Transections</h1>
   <% @transactions.each do |transaction| %>
     <%= render transaction %>
-    <p>
+    <p class="font-bold text-yellow-300">
       <%= link_to "Show this transaction", transaction %>
     </p>
   <% end %>
 </div>
-<%= link_to "New transaction", new_transaction_path %>
+<p class="font-bold text-green-400"> <%= link_to "New transaction", new_transaction_path %> </p>
 
