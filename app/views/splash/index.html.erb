@@ -1,7 +1,12 @@
-<h1>Splash#index</h1>
-<p>Find me in app/views/splash/index.html.erb</p>
-
-    <div>
-      <div><%= link_to "LOG IN", new_user_session_path %></div>
-      <div><%= link_to "SIGN UP", new_user_registration_path %></div>
+<section class="container mx-auto flex justify-center">
+  <div class="w-screen min-h-screen mx-3 py-3 text-center flex flex-col h-14 bg-gradient-to-r from-purple-500 to-pink-500">
+    <div class="grow text-center flex justify-center items-center">
+      <div class="font-black text-3xl text-yellow-300">KEEP YOUR EXPENSES <br/> IN CHECK</div>
     </div>
+    <div>
+      <div class="text-gray-300 font-light my-2"><%= link_to "LOG IN", new_user_session_path, class: "bg-purple-600 hover:bg-blue-700 text-white block py-3 px-4 rounded-sm" %></div>
+      <div class="text-gray-300 font-light my-2"><%= link_to "SIGN UP", new_user_registration_path, class: "bg-purple-700 hover:bg-blue-700 text-white block py-3 px-4 rounded-sm" %></div>
+    </div>
+  </div>
+</section>
+

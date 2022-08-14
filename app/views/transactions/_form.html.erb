@@ -9,24 +9,25 @@
       </ul>
     </div>
   <% end %>
-  <div>
+  
+  <div class="container mx-auto bg-white px-3 py-2">
     <div>
-      <%= form.label :category_id %>
-      <%= form.select :category_id, @category.map { |category| [category.name, category.id] } %>
+      <%= form.label :category_id, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400" %>
+      <%= form.select :category_id, @category.map { |category| [category.name, category.id] }, {}, { class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"} %>
     </div>
 
-    <div>
-      <%= form.text_field :name, autocomplete: "name", autofocus: true, placeholder: "Name", required: true, id: "name" %>
-      <label for="floating_name">Name</label>
+    <div class="relative z-0 w-full my-2 group">
+      <%= form.text_field :name, autocomplete: "name", autofocus: true, class: "block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer", placeholder: "Name", required: true, id: "name" %>
+      <label for="floating_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown peer-focus:scale-75 peer-focus:-translate-y-6">Name</label>
     </div>
 
-    <div>
-      <%= form.number_field :amount, autocomplete: "amount", placeholder: "Amount", required: true, id: "amount" %>
-      <label for="floating_amount">Amount</label>
+    <div class="relative z-0 w-full my-2 group">
+      <%= form.number_field :amount, autocomplete: "amount", class: "block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer", placeholder: "Amount", required: true, id: "amount" %>
+      <label for="floating_amount" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown peer-focus:scale-75 peer-focus:-translate-y-6">Amount</label>
     </div>
 
-    <div>
-      <%= form.submit "Submit" %>
+    <div class="text-gray-200 font-light text-center my-2 w-full">
+      <%= form.submit "Submit", class: "bg-purple-700 hover:bg-pink-400 block py-3 px-4 rounded" %>
     </div>
   </div>
 <% end %>
