@@ -5,9 +5,11 @@ class TransactionsController < ApplicationController
   # GET /transactions
   def index
     @transactions = Transaction.all
+    @search = TransactionSearch.new(params[:search])
+    @transactions = @search.scope
   end
 
-  # GET /transactionss/1
+  # GET /transactions/1
   def show; end
 
   # GET /transactions/new
