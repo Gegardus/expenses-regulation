@@ -4,7 +4,8 @@ class TransactionsController < ApplicationController
 
   # GET /transactions
   def index
-    @transactions = Transaction.all
+    # @transactions = Transaction.all
+    @transactions = current_user.transactions
     @search = TransactionSearch.new(params[:search])
     @transactions = @search.scope
   end
@@ -18,14 +19,14 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.new
   end
 
-  # GET /transactionss/1/edit
+  # GET /transactions/1/edit
   def edit
     @category = current_user.categories
   end
 
-  # POST /transactionss
+  # POST /transactions
   def create
-    @transaction = Transaction.new(transaction_params)
+    @transaction = current_user.transactions.new(transaction_params)
     respond_to do |format|
       if @transaction.save
         format.html do
@@ -66,6 +67,6 @@ class TransactionsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def transaction_params
-    params.require(:transaction).permit(:name, :amount, :category_id)
+    params.require(:transaction).permit(:name, :amount, :category_id, :user_id)
   end
 end
