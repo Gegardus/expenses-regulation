@@ -25,10 +25,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_12_112518) do
   create_table "transactions", force: :cascade do |t|
     t.string "name"
     t.decimal "amount", precision: 9, scale: 2
+    t.bigint "user_id", null: false
     t.bigint "category_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_transactions_on_category_id"
+    t.index ["user_id"], name: "index_transactions_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -43,4 +45,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_12_112518) do
 
   add_foreign_key "categories", "users"
   add_foreign_key "transactions", "categories"
+  add_foreign_key "transactions", "users"
 end
