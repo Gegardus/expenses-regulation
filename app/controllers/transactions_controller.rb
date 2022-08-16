@@ -4,10 +4,8 @@ class TransactionsController < ApplicationController
 
   # GET /transactions
   def index
-    # @transactions = Transaction.all
-    @transactions = current_user.transactions
     @search = TransactionSearch.new(params[:search])
-    @transactions = @search.scope
+    @transactions = @search.scope(current_user)
   end
 
   # GET /transactions/1

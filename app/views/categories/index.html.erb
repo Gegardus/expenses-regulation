@@ -16,6 +16,7 @@
     <% end %>
      <h5 class="m-3 p-3 bg-white text-terciary text-center text-2xl">Total for all categories: $<%= @total_amount %></h5>
   </div>
+
   <div class="bg-success p-1 text-center text-3xl text-white font-light rounded-md">
     <%= link_to "New Category", new_category_path, class: "border border-white hover:opacity-50 block p-4 rounded-md" %>
   </div>
@@ -23,5 +24,10 @@
   <div class="bg-green-700 p-1 text-center text-3xl text-white font-light rounded-md">
     <%= link_to "New Transaction", new_transaction_path, class: "border border-white hover:opacity-50 block p-4 rounded-md" %>
   </div>
+
+  <div class="bg-green-800 p-1 text-center text-3xl text-white font-light rounded-md">
+    <%= link_to "Show all transactions", transactions_path, class: "border border-white hover:opacity-50 block p-4 rounded-md" %>
+  </div>
 </div>
+
 

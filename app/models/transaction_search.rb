@@ -7,8 +7,8 @@ class TransactionSearch
     @date_to = parsed_date(params[:date_to], Date.today.to_s)
   end
 
-  def scope
-    Transaction.where('created_at BETWEEN ? AND ?', @date_from, @date_to)
+  def scope(current_user)
+    Transaction.where('created_at BETWEEN ? AND ? AND user_id = ?', @date_from, @date_to, current_user.id)
   end
 
   private
