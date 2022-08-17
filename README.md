@@ -1,42 +1,119 @@
-# README
+# Expenses Regulation
 
-## Тестовое задание на позицию Trainee Ruby Developer
+> This Ruby on Rails project is about building a mobile web application where user can manage his/her/their budget, having a list of transactions associated with a category, so that user can see how much money is spent and on what. 
 
-Задание можно выполнить на любом языке программирования, используя любую базу данных. Ваша цель - показать best practices в выбранных технологиях.
+Each user has the possibility to:
 
-Создайте консольное приложение для контроля расходов.
-В приложении должен быть следующий функционал:
-Возможность записывать расходы по категориям. Например: Еда - 250.
-Получать статистику расходов - по всем категориям сразу или по одной из них.
-Возможность очистить все данные.
-Посмотреть статистику расходов: за день, за месяц, за год
-Внести расходы за какой-то конкретный день. Например 12.12.2012 Еда - 250
-Добавить возможность иметь нескольких пользователей
-Написать юнит тесты для приложения
+- get statistics of his/her/their expenses - for all categories at once or for one of them,
+- delete any of his/her/their transactions,
+- view statistics of his/her/their expenses for any period of time by entering the appropriate dates in the search box on the "All transactions" page.
 
-Для того, чтобы тестовое считалось готовым, должны работать все основные функции. Должен быть репозиторий на GitHub/GitLab/Bitbucket и написан Readme файл с пошаговой инструкцией для запуска и использования программы. Можно приложить скрины, показывающие, как она работает.
+![screenshot](./app_screenshot1.png)
+![screenshot](./app_screenshot2.png)
+![screenshot](./app_screenshot3.png)
 
-В качестве готового тестового присылать ссылку на репозиторий.
+## Live Demo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Run if currently available]()
 
-Things you may want to cover:
+## Built With
 
-* Ruby version
+- Major languages (Ruby)
+- Framworks (Ruby on Rails)
 
-* System dependencies
+## Getting Started
 
-* Configuration
+To get a local copy up and running follow these simple example steps.
 
-* Database creation
+## Prerequisites
 
-* Database initialization
+- A text editor(preferably Visual Studio Code)
 
-* How to run the test suite
+## Install
 
-* Services (job queues, cache servers, search engines, etc.)
+- Ruby
+- Ruby on Rails
+- PostgresSQL
+- Rspec
 
-* Deployment instructions
+## Using it Locally
 
-* ...
+- Clone the project
+
+## Setup
+
+Install gems with:
+
+```
+bundle install
+```
+
+Setup database with:
+
+```
+rails db:create
+rails db:migrate
+rails db:seed
+```
+
+## Usage
+
+Start server with:
+
+```
+rails server
+```
+
+Open http://localhost:3000/ in your browser.
+
+## Install linter
+
+```bash
+bundle install
+```
+
+## Run tests
+
+Install rspec with:
+
+```
+bundle install
+```
+
+and
+
+```
+rails generate rspec:install
+```
+
+run the test with:
+
+```
+rails exec rspec
+```
+
+## Visit And Open Files
+
+[Visit Repo](https://github.com/Gegardus/expenses-regulation)
+
+## Clone Repo
+
+[Clone Repo](https://github.com/Gegardus/expenses-regulation.git)
+
+## Author
+
+👤 **Vahan Khachvankian**
+
+- GitHub: [@githubhandle](https://github.com/Gegardus)
+- Twitter: [@twitterhandle](https://twitter.com/Gegardus)
+- LinkedIn: [@linkedinhandle](https://www.linkedin.com/in/vahan-khachvankian)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/Gegardus/expenses-regulation/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
