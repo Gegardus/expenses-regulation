@@ -5,7 +5,7 @@ RSpec.describe '/categories', type: :request do
     before(:each) do
       @user = User.create(name: 'Vahan', email: 'test@example.com', password: 'password')
       @category = Category.create(name: 'Category', user: @user)
-      @transaction = Transaction.create(user: @user, category: @category, name: 'Payment', amount: 200, category: @category)
+      @transaction = Transaction.create(user: @user, category: @category, name: 'Payment', amount: 200)
 
       post user_session_path, params: { user: { email: @user.email, password: @user.password } }
       get root_path
@@ -30,7 +30,7 @@ RSpec.describe '/categories', type: :request do
     before(:each) do
       @user = User.create(name: 'Ani', email: 'test@example.com', password: '123456')
       @category = Category.create(name: 'Test category', user: @user)
-      @transaction = Transaction.create(user: @user, category: @category, name: 'Payment', amount: 200, category: @category)
+      @transaction = Transaction.create(user: @user, category: @category, name: 'Payment', amount: 200)
 
       post user_session_path, params: { user: { email: @user.email, password: @user.password } }
       get new_category_path
@@ -45,7 +45,7 @@ RSpec.describe '/categories', type: :request do
     end
 
     it 'renders correct content' do
-      expect(response.body).to include('NEW CATEGORY')      
+      expect(response.body).to include('NEW CATEGORY')
       expect(response.body).to include('Name')
       expect(response.body).to include('Submit')
     end

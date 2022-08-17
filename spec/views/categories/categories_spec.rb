@@ -14,7 +14,7 @@ RSpec.describe 'Testing categories views', type: :feature do
 
   describe 'categories#index' do
     it 'for each category, shows the name,
-    and the total amount of all the transactions that belongs to that category' do    
+    and the total amount of all the transactions that belongs to that category' do
       expect(page).to have_content 'Category'
       expect(page).to have_content('$14')
     end
