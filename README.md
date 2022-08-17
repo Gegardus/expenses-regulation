@@ -15,7 +15,7 @@ Each user has the possibility to:
 
 ## Live Demo
 
-[Run if currently available]()
+[Run if currently available](https://expenses-regulation.herokuapp.com/)
 
 ## Built With
 
