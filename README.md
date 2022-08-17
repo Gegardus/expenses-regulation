@@ -11,6 +11,7 @@ Each user has the possibility to:
 ![screenshot](./app_screenshot1.png)
 ![screenshot](./app_screenshot2.png)
 ![screenshot](./app_screenshot3.png)
+![screenshot](./app_screenshot4.png)
 
 ## Live Demo
 
