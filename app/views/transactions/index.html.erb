@@ -17,8 +17,6 @@
      <h5 class="m-3 p-3 bg-white text-terciary text-center text-2xl w-max">Total for all categories: $<%= @total_amount %></h5>
   </div> 
 
-
-
   <% @transactions.each do |transaction| %>
     <%= render transaction %>
     <p class="font-bold text-yellow-300">
