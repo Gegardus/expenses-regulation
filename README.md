@@ -15,7 +15,7 @@ Each user has the possibility to:
 
 ## Live Demo
 
-[Run if currently available](https://expenses-regulation.herokuapp.com/)
+[Run if currently available](https://expenses-regulation-production.up.railway.app/)
 
 ## Built With
 
